@@ -10,18 +10,14 @@ lone_sum(3, 3, 3) → 0
 """
 
 def lone_sum(a, b, c):
-  
-  if a==b and b==c:
-    return 0
-  if a==b:
-    return c
-  else:
-    if a==c:
-      return b
-    else:
-      if b==c:
-        return a
-      else:
+    total = 0
+    if a != b and a != c:
+        total = total + a
+            
+    if b != a and b != c:
+        total = total + b
+                      
+    if c != a and c != b:
+        total = total + c
         
-        return a+b+c
-  
+    return total
