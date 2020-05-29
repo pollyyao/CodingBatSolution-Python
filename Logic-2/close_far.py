@@ -8,7 +8,7 @@ close_far(1, 2, 3) → False
 close_far(4, 1, 3) → True
 
 """
-
+1.
 def close_far(a, b, c):
   if abs(b-a)<=1:
     if abs(c-a)>=2 and abs(c-b)>=2:
@@ -22,4 +22,24 @@ def close_far(a, b, c):
       else:
         return False
   return False
+  
+
+  
+  
+ 2.
+
+def close_far(a, b, c):
+  return is_close(a, b) and is_far(a, b, c) or is_close(a, c) and is_far(a, c, b)
+ 
+ 
+def is_close(a, b):
+  return abs(b-a)<=1
+  
+def is_far(a, b, c):
+  return abs(c-a)>=2 and abs(c-b)>=2
     
+  
+  
+  
+  
+  
