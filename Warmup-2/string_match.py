@@ -11,15 +11,10 @@ string_match('abc', 'axc') → 0
 """
 
 def string_match(a, b):
-  length = 0
-  if len(a)<len(b):
-    length = len(a)
-  else:
-    length = len(b)
-    
+ 
   count = 0
   
-  for i in range(length-1):
+  for i in range(min(len(a),len(b))-1):
     if a[i:i+2] == b[i:i+2]:
       count = count + 1
       
