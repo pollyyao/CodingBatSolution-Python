@@ -19,15 +19,14 @@ def big_diff(nums):
   
   
   for i in range(len(nums)-1):
-    tmp = min(nowMin, nums[i+1])
+    nowMin = min(nowMin, nums[i+1])
     
-    nowMin = tmp
-    
+
     
   for i in range(len(nums)-1):
-    tmp = max(nowMax, nums[i+1])
+    nowMax = max(nowMax, nums[i+1])
     
-    nowMax = tmp
+    
     
   diff = nowMax-nowMin
   
